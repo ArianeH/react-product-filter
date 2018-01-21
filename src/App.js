@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Card from './Card.js';
 
@@ -30,7 +29,11 @@ class App extends Component {
     return (
       <div className="container">
         {this.state.designsArray.map(item =>
-          <Card name={item.name}/>
+          <Card
+          key={item.id}
+          name={item.name}
+          description={item.short_description}
+          image={item.thumbnail_url}/>
         )}
       </div>
     );
