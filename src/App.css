@@ -1,28 +1,13 @@
-.App {
-  text-align: center;
+.container {
+  background-color: #fbfbfb;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+.product-card-wrapper {
+  min-height: calc(100vh - 170px);
   padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

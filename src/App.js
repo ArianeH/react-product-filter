@@ -28,13 +28,15 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        {this.state.designsArray.map(item =>
-          <Card
-          key={item.id}
-          name={item.name}
-          description={item.short_description}
-          image={item.thumbnail_url}/>
-        )}
+        <div className="product-card-wrapper">
+          {this.state.designsArray.map(item =>
+            <Card
+            key={item.id}
+            name={item.name}
+            description={item.short_description}
+            image={item.thumbnail_url}/>
+          )}
+        </div>
       </div>
     );
   }
