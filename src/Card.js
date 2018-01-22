@@ -8,8 +8,10 @@ export class Card extends Component {
       <a href="#" className="product-card">
         <div className="product-card-content">
           <img src={this.props.image} alt="Display of fabric" className="product-img"/>
-          <h2 className="product-card-heading">{this.props.name}</h2>
-          <p className="description">{this.props.description}</p>
+          <div className="product-details-container">
+            <h2 className="product-card-heading">{this.props.name}</h2>
+            <p className="description">{this.props.description}</p>
+          </div>
         </div>
       </a>
     );
