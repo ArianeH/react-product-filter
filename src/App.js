@@ -27,7 +27,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="product-card-wrapper">
           {this.state.designsArray.map(item =>
             <Card
