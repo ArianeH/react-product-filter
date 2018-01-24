@@ -19,11 +19,12 @@ ul.pagination {
   transform: translate(-50%, -50%);
 }
 .pagination > .active > a {
-  background-color: $custom-dark-grey;
-  border-color: $custom-dark-grey;
-  color: white;
+  color: lightgrey;
+}
+.pagination > li:hover {
+  color: grey;
 }
 .pagination > li > a {
-  color: $custom-dark-grey;
+  margin: 5px;
   cursor: pointer;
 }
