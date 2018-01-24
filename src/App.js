@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from './Card.js';
+import Pagination from './Pagination';
 
 const spoonflowerRootUrl = `http://search.spoonflower.com/searchv2/designs`
 
@@ -8,8 +9,13 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      designsArray: [],
+      pageOfItems: []
     };
+    this.onChangePage = this.onChangePage.bind(this);
+  }
+
+  onChangePage(pageOfItems) {
+    this.setState({ pageOfItems: pageOfItems });
   }
 
   componentDidMount() {
@@ -29,7 +35,7 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <div className="product-card-wrapper">
-          {this.state.designsArray.map(item =>
+          {this.state.pageOfItems.map(item =>
             <Card
             key={item.id}
             name={item.name}
@@ -37,6 +43,7 @@ class App extends Component {
             image={item.thumbnail_url}/>
           )}
         </div>
+        <Pagination className="page-change-bar" items={this.state.designsArray} onChangePage={this.onChangePage} />
       </div>
     );
   }
