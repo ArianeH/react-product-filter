@@ -16,6 +16,25 @@
   color: #636363;
 }
 
+.filter-section {
+  padding: 40px 20px 20px 50px;
+}
+.product-filter > select, .search-btn {
+  height: 30px;
+  background-color: #fbfbfb;
+}
+.product-filter > select {
+  padding: 0px 5px 0px 10px;
+}
+.search-btn {
+  border: 1px solid rgb(169, 169, 169);
+  margin-right: 30px;
+  padding: 0px 10px;
+}
+.input-field {
+  height: 30px;
+}
+
 .product-card-wrapper {
   min-height: calc(100vh - 170px);
   padding: 20px;

@@ -37,6 +37,16 @@ class App extends Component {
 
         <div className="header-section">
           <h1 id="main-heading">Product Filter</h1>
+
+
+            <div className="filter-section">
+              <div className="product-filter">
+                <input id="tag-input-field" className="input-field" type="text" name="tag-selector" placeholder="Search by Term"/>
+                <input type="submit" value="Search" onclick="searchByInputs()" className="search-btn"/>
+              </div>
+            </div>
+
+
         </div>
 
         <div className="product-card-wrapper">
