@@ -34,6 +34,11 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
+
+        <div className="header-section">
+          <h1 id="main-heading">Product Filter</h1>
+        </div>
+
         <div className="product-card-wrapper">
           {this.state.pageOfItems.map(item =>
             <Card
