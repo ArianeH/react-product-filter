@@ -33,7 +33,7 @@
   left: 0;
   width: 220px;
   height: 200px;
-  padding: 0px 15px;
+  padding: 5px 15px 0px 15px;
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
