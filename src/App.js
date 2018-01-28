@@ -13,14 +13,15 @@ class App extends Component {
       pageOfItems: []
     };
     this.onChangePage = this.onChangePage.bind(this);
+    this.displayResults = this.displayResults.bind(this);
   }
 
   onChangePage(pageOfItems) {
     this.setState({ pageOfItems: pageOfItems });
   }
 
-  componentDidMount() {
-    fetch(spoonflowerRootUrl)
+  displayResults(filter) {
+    fetch(spoonflowerRootUrl + '?q=' + filter)
     .then(results => {
       return results.json();
     })
@@ -32,6 +33,10 @@ class App extends Component {
     })
   }
 
+  componentDidMount() {
+    this.displayResults("")
+  }
+
   render() {
     return (
       <div className="container-fluid">
@@ -39,11 +44,9 @@ class App extends Component {
         <div className="header-section">
           <h1 id="main-heading">Product Filter</h1>
 
-
-            <div className="filter-section">
-              <ProductFilter/>
-            </div>
-
+          <div className="filter-section">
+            <ProductFilter displayResults={this.displayResults}/>
+          </div>
 
         </div>
 
