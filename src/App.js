@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ProductFilter from './Product-Filter.js';
 import Card from './Card.js';
 import Pagination from './Pagination';
 
@@ -40,10 +41,7 @@ class App extends Component {
 
 
             <div className="filter-section">
-              <div className="product-filter">
-                <input id="tag-input-field" className="input-field" type="text" name="tag-selector" placeholder="Search by Term"/>
-                <input type="submit" value="Search" onclick="searchByInputs()" className="search-btn"/>
-              </div>
+              <ProductFilter/>
             </div>
 
 
